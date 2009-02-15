@@ -1,5 +1,5 @@
 %define module   CGI-Application-Plugin-AutoRunmode
-%define version    0.15
+%define version    0.16
 %define release    %mkrel 1
 
 Name:       perl-%{module}
