@@ -1,15 +1,13 @@
 %define upstream_name    CGI-Application-Plugin-AutoRunmode
-%define upstream_version 0.18
-
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	0.18
+Release:	6
 
 Summary:	CGI::App plugin to automatically register runmodes
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/CGI/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/CGI/%{upstream_name}-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -26,7 +24,7 @@ There are two approaches:
 * Declare run modes with subroutine attributes. 
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version} 
+%setup -q -n %{upstream_name}-%{version} 
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -59,9 +57,7 @@ make test
 
 * Sat Aug 01 2009 Jérôme Quelin <jquelin@mandriva.org> 0.160.0-1mdv2010.0
 + Revision: 405772
-- rebuild using %%perl_convert_version
-
-* Sun Feb 15 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.16-1mdv2009.1
+- rebuild using %0.18 Sun Feb 15 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.16-1mdv2009.1
 + Revision: 340551
 - update to new version 0.16
 
